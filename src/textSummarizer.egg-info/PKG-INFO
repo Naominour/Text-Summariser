@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: textSummarizer
+Version: 0.0.0
+Summary: a pyhton project for text summarization task
+Home-page: https://github.com/Naomi/Text-Summarizer
+Author: Naomi
+Author-email: naominourr@gmail.com
+Project-URL: Bug Tracker, https://github.com/Naomi/Text-Summarizer/issues
+Description-Content-Type: text/markdown
+
+# Text-Summarizer-
+Text Summarizer is a summary generator that helps to summarize articles, paragraphs, and essays.
