@@ -37,13 +37,3 @@ class DataIngestion:
         os.makedirs(unzip_path, exist_ok=True)
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
             zip_ref.extractall(unzip_path)
-
-try:
-    config = Configurationmanager()
-    data_ingestion_config = config.get_data_ingestion_config()
-    data_ingestion = DataIngestion(data_ingestion_config)
-    data_ingestion.download_file()
-    data_ingestion.extract_zip_file()
-
-except Exception as e:
-    raise e
