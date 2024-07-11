@@ -1,1 +1,40 @@
 [2024-07-03 02:24:30,994: INFO: main: Welcome to our custom logging]
+[2024-07-11 12:46:28,852: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-11 12:46:28,910: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-11 12:46:28,984: INFO: common: Created directory: artifacts]
+[2024-07-11 12:46:29,017: INFO: common: Created directory: artifacts/data_ingestion]
+[2024-07-11 12:49:51,024: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-11 12:49:51,130: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-11 12:49:51,154: INFO: common: Created directory: artifacts]
+[2024-07-11 12:49:51,165: INFO: common: Created directory: artifacts/data_ingestion]
+[2024-07-11 12:51:19,271: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-11 12:51:19,285: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-11 12:51:19,335: INFO: common: Created directory: artifacts]
+[2024-07-11 12:51:19,621: INFO: common: Created directory: artifacts/data_ingestion]
+[2024-07-11 12:51:24,840: INFO: 1877138409:  artifacts/data_ingestion/data.zip download! with following info:
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3FBD:FD0B7:446A3:509EC:668FC73B
+Accept-Ranges: bytes
+Date: Thu, 11 Jul 2024 11:51:24 GMT
+Via: 1.1 varnish
+X-Served-By: cache-man4149-MAN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1720698684.888428,VS0,VE564
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fbe497a8f6e6c4e93bd0c446108959b6d277c714
+Expires: Thu, 11 Jul 2024 11:56:24 GMT
+Source-Age: 0
+
+]

@@ -2,7 +2,7 @@ import os
 import yaml
 
 from box.exceptions import BoxValueError
-from textsummarizer.logging import logger
+from textsummarizer.loggin import logger
 from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
