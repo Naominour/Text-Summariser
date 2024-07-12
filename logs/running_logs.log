@@ -205,3 +205,49 @@ Source-Age: 0
 [2024-07-12 10:11:17,146: INFO: common: Created directory: artifacts]
 [2024-07-12 10:11:17,167: INFO: common: Created directory: artifacts/data_validation]
 [2024-07-12 10:11:17,332: INFO: main: >>>>>>>>> stage Data Validation Stage completed <<<<<<<<]
+[2024-07-12 12:01:07,404: INFO: config: PyTorch version 2.3.1 available.]
+[2024-07-12 12:01:12,857: INFO: main: >>>>>>>>> stage Data Ingestion Stage started <<<<<<<<]
+[2024-07-12 12:01:12,894: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-12 12:01:12,909: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-12 12:01:12,927: INFO: common: Created directory: artifacts]
+[2024-07-12 12:01:12,972: INFO: common: Created directory: artifacts/data_ingestion]
+[2024-07-12 12:01:19,581: INFO: data_ingestion:  artifacts/data_ingestion/data.zip download! with following info:
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6FA1:F428D:17AB9A:1CA09F:66910CFD
+Accept-Ranges: bytes
+Date: Fri, 12 Jul 2024 11:01:19 GMT
+Via: 1.1 varnish
+X-Served-By: cache-man4141-MAN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1720782079.980416,VS0,VE470
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b65920143a66ccc2c5ce151c6938e19e6ee8f878
+Expires: Fri, 12 Jul 2024 11:06:19 GMT
+Source-Age: 0
+
+]
+[2024-07-12 12:01:20,348: INFO: main: >>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<]
+[2024-07-12 12:01:20,350: INFO: main: >>>>>>>>> stage Data Validation Stage started <<<<<<<<]
+[2024-07-12 12:01:20,363: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-12 12:01:20,376: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-12 12:01:20,386: INFO: common: Created directory: artifacts]
+[2024-07-12 12:01:20,402: INFO: common: Created directory: artifacts/data_validation]
+[2024-07-12 12:01:21,505: INFO: main: >>>>>>>>> stage Data Validation Stage completed <<<<<<<<]
+[2024-07-12 12:01:21,507: INFO: main: >>>>>>>>> stage Data Transformation Stage started <<<<<<<<]
+[2024-07-12 12:01:21,517: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-12 12:01:21,526: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-12 12:01:21,531: INFO: common: Created directory: artifacts]
+[2024-07-12 12:01:21,563: INFO: common: Created directory: artifacts/data_transformation]
+[2024-07-12 12:01:55,903: INFO: main: >>>>>>>>> stage Data Transformation Stage completed <<<<<<<<]
