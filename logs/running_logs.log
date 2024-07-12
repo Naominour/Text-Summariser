@@ -131,3 +131,77 @@ Source-Age: 0
 [2024-07-11 16:02:03,475: INFO: common: yaml file: params.yaml loaded successfully]
 [2024-07-11 16:02:03,488: INFO: common: Created directory: artifacts]
 [2024-07-11 16:02:03,521: INFO: common: Created directory: artifacts/data_validation]
+[2024-07-12 10:07:52,830: INFO: main: >>>>>>>>> stage Data Ingestion Stage started <<<<<<<<]
+[2024-07-12 10:07:52,887: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-12 10:07:52,910: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-12 10:07:53,009: INFO: common: Created directory: artifacts]
+[2024-07-12 10:07:53,031: INFO: common: Created directory: artifacts/data_ingestion]
+[2024-07-12 10:07:53,887: ERROR: main: HTTP Error 502: Bad Gateway]
+Traceback (most recent call last):
+  File "G:\My Drive\Text Summarizer\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "G:\My Drive\Text Summarizer\src\textsummarizer\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "G:\My Drive\Text Summarizer\src\textsummarizer\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+[2024-07-12 10:11:11,945: INFO: main: >>>>>>>>> stage Data Ingestion Stage started <<<<<<<<]
+[2024-07-12 10:11:11,966: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-12 10:11:11,980: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-12 10:11:11,980: INFO: common: Created directory: artifacts]
+[2024-07-12 10:11:11,980: INFO: common: Created directory: artifacts/data_ingestion]
+[2024-07-12 10:11:14,933: INFO: data_ingestion:  artifacts/data_ingestion/data.zip download! with following info:
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 99F6:11FCC6:BA1B5:EBAC9:6690F334
+Accept-Ranges: bytes
+Date: Fri, 12 Jul 2024 09:11:18 GMT
+Via: 1.1 varnish
+X-Served-By: cache-man4122-MAN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1720775478.521822,VS0,VE554
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3188287825813b19a0008a800c199158c5ec147d
+Expires: Fri, 12 Jul 2024 09:16:18 GMT
+Source-Age: 0
+
+]
+[2024-07-12 10:11:17,086: INFO: main: >>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<]
+[2024-07-12 10:11:17,086: INFO: main: >>>>>>>>> stage Data Validation Stage started <<<<<<<<]
+[2024-07-12 10:11:17,102: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-12 10:11:17,144: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-12 10:11:17,146: INFO: common: Created directory: artifacts]
+[2024-07-12 10:11:17,167: INFO: common: Created directory: artifacts/data_validation]
+[2024-07-12 10:11:17,332: INFO: main: >>>>>>>>> stage Data Validation Stage completed <<<<<<<<]
