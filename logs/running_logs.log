@@ -281,3 +281,100 @@ Source-Age: 0
 [2024-07-12 23:07:59,993: INFO: common: Created directory: artifacts]
 [2024-07-12 23:07:59,993: INFO: common: Created directory: artifacts/model_trainer]
 [2024-07-13 02:08:42,585: INFO: main: >>>>>>>>> stage Model Trainer Stage completed <<<<<<<<]
+[2024-07-15 12:58:46,313: INFO: utils: NumExpr defaulting to 2 threads.]
+[2024-07-15 12:58:49,400: INFO: server: Started server process [1906]]
+[2024-07-15 12:58:49,404: INFO: on: Waiting for application startup.]
+[2024-07-15 12:58:49,406: INFO: on: Application startup complete.]
+[2024-07-15 12:58:49,407: ERROR: server: [Errno 98] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-07-15 12:58:49,407: INFO: on: Waiting for application shutdown.]
+[2024-07-15 12:58:49,407: INFO: on: Application shutdown complete.]
+[2024-07-15 12:59:14,976: INFO: utils: NumExpr defaulting to 2 threads.]
+[2024-07-15 12:59:16,487: INFO: server: Started server process [2074]]
+[2024-07-15 12:59:16,490: INFO: on: Waiting for application startup.]
+[2024-07-15 12:59:16,491: INFO: on: Application startup complete.]
+[2024-07-15 12:59:16,493: ERROR: server: [Errno 98] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-07-15 12:59:16,493: INFO: on: Waiting for application shutdown.]
+[2024-07-15 12:59:16,493: INFO: on: Application shutdown complete.]
+[2024-07-15 13:01:14,971: INFO: utils: NumExpr defaulting to 2 threads.]
+[2024-07-15 13:01:16,508: INFO: server: Started server process [2560]]
+[2024-07-15 13:01:16,511: INFO: on: Waiting for application startup.]
+[2024-07-15 13:01:16,513: INFO: on: Application startup complete.]
+[2024-07-15 13:01:16,514: ERROR: server: [Errno 98] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-07-15 13:01:16,514: INFO: on: Waiting for application shutdown.]
+[2024-07-15 13:01:16,515: INFO: on: Application shutdown complete.]
+[2024-07-15 13:04:25,638: INFO: utils: NumExpr defaulting to 2 threads.]
+[2024-07-15 13:04:27,737: INFO: server: Started server process [3328]]
+[2024-07-15 13:04:27,741: INFO: on: Waiting for application startup.]
+[2024-07-15 13:04:27,742: INFO: on: Application startup complete.]
+[2024-07-15 13:04:27,744: ERROR: server: [Errno 98] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-07-15 13:04:27,744: INFO: on: Waiting for application shutdown.]
+[2024-07-15 13:04:27,745: INFO: on: Application shutdown complete.]
+[2024-07-15 14:07:38,878: INFO: server: Started server process [8992]]
+[2024-07-15 14:07:39,336: INFO: on: Waiting for application startup.]
+[2024-07-15 14:07:39,338: INFO: on: Application startup complete.]
+[2024-07-15 14:07:39,341: INFO: server: Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)]
+[2024-07-15 14:10:52,913: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-15 14:10:52,974: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-15 14:10:52,983: INFO: common: Created directory: artifacts]
+[2024-07-15 14:10:52,990: INFO: common: Created directory: artifacts/model_evaluation]
+[2024-07-15 14:16:04,201: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-15 14:16:04,215: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-15 14:16:04,219: INFO: common: Created directory: artifacts]
+[2024-07-15 14:16:04,223: INFO: common: Created directory: artifacts/model_evaluation]
+[2024-07-15 14:27:09,638: INFO: server: Shutting down]
+[2024-07-15 14:27:09,750: INFO: on: Waiting for application shutdown.]
+[2024-07-15 14:27:10,025: INFO: on: Application shutdown complete.]
+[2024-07-15 14:27:10,027: INFO: server: Finished server process [8992]]
+[2024-07-15 14:37:16,977: INFO: server: Started server process [14776]]
+[2024-07-15 14:37:17,011: INFO: on: Waiting for application startup.]
+[2024-07-15 14:37:17,012: INFO: on: Application startup complete.]
+[2024-07-15 14:37:17,015: INFO: server: Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)]
+[2024-07-15 14:49:36,997: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-15 14:49:37,022: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-15 14:49:37,029: INFO: common: Created directory: artifacts]
+[2024-07-15 14:49:37,033: INFO: common: Created directory: artifacts/model_evaluation]
+[2024-07-15 14:59:02,858: INFO: server: Shutting down]
+[2024-07-15 14:59:02,863: ERROR: base_events: Exception in callback BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55826))>) at C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py:836
+handle: <Handle BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55826))>) at C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py:836>]
+Traceback (most recent call last):
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 851, in loop
+    self._make_socket_transport(
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 642, in _make_socket_transport
+    return _ProactorSocketTransport(self, sock, protocol, waiter,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 608, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 185, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 330, in __init__
+    super().__init__(*args, **kw)
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 65, in __init__
+    self._server._attach()
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 294, in _attach
+    assert self._sockets is not None
+AssertionError
+[2024-07-15 14:59:02,972: INFO: server: Finished server process [14776]]
+[2024-07-15 14:59:05,749: ERROR: on: Traceback (most recent call last):
+  File "G:\My Drive\Text Summarizer\textS\Lib\site-packages\starlette\routing.py", line 638, in lifespan
+    await receive()
+  File "G:\My Drive\Text Summarizer\textS\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H.Naeeme\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+]
+[2024-07-15 15:06:53,217: INFO: server: Started server process [15908]]
+[2024-07-15 15:06:53,229: INFO: on: Waiting for application startup.]
+[2024-07-15 15:06:53,232: INFO: on: Application startup complete.]
+[2024-07-15 15:06:53,234: INFO: server: Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)]
+[2024-07-15 15:34:47,506: INFO: server: Shutting down]
+[2024-07-15 15:34:47,617: INFO: on: Waiting for application shutdown.]
+[2024-07-15 15:34:47,630: INFO: on: Application shutdown complete.]
+[2024-07-15 15:34:47,885: INFO: server: Finished server process [15908]]
+[2024-07-15 15:40:12,648: INFO: server: Started server process [17768]]
+[2024-07-15 15:40:14,291: INFO: on: Waiting for application startup.]
+[2024-07-15 15:40:14,293: INFO: on: Application startup complete.]
+[2024-07-15 15:40:14,297: INFO: server: Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)]

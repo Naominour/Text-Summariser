@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Summarizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .output {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            min-height: 100px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .button-container button {
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+        }
+        .button-paste {
+            background-color: #FF8C00;
+            border: 1px solid #FF8C00;
+        }
+        .button-summarize {
+            background-color: #00008B;
+            border: 1px solid #00008B;
+        }
+        .button-copy {
+            background-color: #FF8C00;
+            border: 1px solid #FF8C00;
+            margin-top: 10px;
+        }
+        #progress-bar {
+            width: 100%;
+            background-color: #f3f3f3;
+            margin-top: 10px;
+        }
+        #progress-bar div {
+            width: 0;
+            height: 30px;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Summarizer</h1>
+        <textarea id="input-text" placeholder="Type or paste your content here to summarize it"></textarea>
+        <div class="button-container">
+            <button class="button-paste" onclick="pasteText()">Paste Text</button>
+            <button class="button-summarize" onclick="summarize()">Summarize</button>
+        </div>
+        <div id="progress-bar"><div></div></div>
+        <div id="output" class="output">Output will be here...</div>
+        <div class="button-container">
+            <button class="button-copy" onclick="copyText()">Copy Summarized Text</button>
+        </div>
+    </div>
+
+    <script>
+        async function summarize() {
+            const text = document.getElementById('input-text').value;
+            const progressBar = document.getElementById('progress-bar').firstElementChild;
+            
+            progressBar.style.width = '0';
+            progressBar.style.transition = 'width 2s';
+            progressBar.style.width = '100%';
+
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: text }),
+            });
+
+            const result = await response.text();
+            progressBar.style.width = '100%';
+            document.getElementById('output').innerText = result;
+        }
+
+        function pasteText() {
+            navigator.clipboard.readText().then(text => {
+                document.getElementById('input-text').value = text;
+            }).catch(err => {
+                console.error('Failed to read clipboard contents: ', err);
+            });
+        }
+
+        function copyText() {
+            const outputText = document.getElementById('output').innerText;
+            navigator.clipboard.writeText(outputText).then(() => {
+                alert('Summarized text copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
