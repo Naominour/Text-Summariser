@@ -1,4 +1,4 @@
-*.py linguist-language=Python
+*.ipynb linguist-language=Python
 * text=auto
 *.csv text eol=lf
 *.log text eol=lf
