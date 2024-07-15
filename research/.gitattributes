@@ -1,0 +1,5 @@
+*.py linguist-language=Python
+* text=auto
+*.csv text eol=lf
+*.log text eol=lf
+*.ipynb text eol=lf
