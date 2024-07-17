@@ -39,9 +39,12 @@ jobs:
           sudo apt-get install -y jq unzip
 
       - name: Log in to Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        env:
+          AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
+          AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
+          AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
+        run: |
+          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
 
       - name: Azure CLI script
         run: |
@@ -69,9 +72,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Log in to Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        env:
+          AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
+          AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
+          AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
+        run: |
+          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
 
       - name: Deploy to Azure Container Instances
         run: |
