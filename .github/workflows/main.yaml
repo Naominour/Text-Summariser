@@ -38,21 +38,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y jq unzip
 
-      - name: Escape special characters in AZURE_PASSWORD
-        id: escape-password
+      - name: Log in to Azure CLI using managed identity
         run: |
-          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//%/%25})"
-          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//\&/%26})"
-          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//\#/%23})"
-          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//\=/%%3D})"
-
-      - name: Log in to Azure CLI
-        env:
-          AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
-          AZURE_PASSWORD: ${{ steps.escape-password.outputs.escaped-password }}
-          AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
-        run: |
-          az login -u "$AZURE_USERNAME" -p "$AZURE_PASSWORD" --tenant "$AZURE_TENANT"
+          az login --identity
 
       - name: Azure CLI script
         run: |
@@ -76,13 +64,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Log in to Azure CLI
-        env:
-          AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
-          AZURE_PASSWORD: ${{ steps.escape-password.outputs.escaped-password }}
-          AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
+      - name: Log in to Azure CLI using managed identity
         run: |
-          az login -u "$AZURE_USERNAME" -p "$AZURE_PASSWORD" --tenant "$AZURE_TENANT"
+          az login --identity
 
       - name: Deploy to Azure Container Instances
         run: |
