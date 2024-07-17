@@ -44,7 +44,7 @@ jobs:
           AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
           AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
         run: |
-          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
+          az login --service-principal -u "$AZURE_USERNAME" -p "$AZURE_PASSWORD" --tenant "$AZURE_TENANT"
 
       - name: Azure CLI script
         run: |
@@ -74,7 +74,7 @@ jobs:
           AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
           AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
         run: |
-          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
+          az login --service-principal -u "$AZURE_USERNAME" -p "$AZURE_PASSWORD" --tenant "$AZURE_TENANT"
 
       - name: Deploy to Azure Container Instances
         run: |
