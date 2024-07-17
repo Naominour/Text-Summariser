@@ -38,13 +38,21 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y jq unzip
 
+      - name: Escape special characters in AZURE_PASSWORD
+        id: escape-password
+        run: |
+          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//%/%25})"
+          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//\&/%26})"
+          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//\#/%23})"
+          echo "::set-output name=escaped-password::$(echo ${AZURE_PASSWORD//\=/%%3D})"
+
       - name: Log in to Azure CLI
         env:
           AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
-          AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
+          AZURE_PASSWORD: ${{ steps.escape-password.outputs.escaped-password }}
           AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
         run: |
-          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
+          az login -u "$AZURE_USERNAME" -p "$AZURE_PASSWORD" --tenant "$AZURE_TENANT"
 
       - name: Azure CLI script
         run: |
@@ -71,10 +79,10 @@ jobs:
       - name: Log in to Azure CLI
         env:
           AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
-          AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
+          AZURE_PASSWORD: ${{ steps.escape-password.outputs.escaped-password }}
           AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
         run: |
-          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
+          az login -u "$AZURE_USERNAME" -p "$AZURE_PASSWORD" --tenant "$AZURE_TENANT"
 
       - name: Deploy to Azure Container Instances
         run: |
