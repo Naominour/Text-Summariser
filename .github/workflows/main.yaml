@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: workflow
 
 on:
@@ -86,3 +87,93 @@ jobs:
       - name: Clean previous images and containers
         run: |
           docker system prune -f
+=======
+name: workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  integration:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Lint code
+        run: echo "Linting repository"
+
+      - name: Run unit tests
+        run: echo "Running unit tests"
+
+  build-and-push-acr-image:
+    name: Continuous Delivery
+    needs: integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq unzip
+
+      - name: Log in to Azure CLI
+        env:
+          AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
+          AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
+          AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
+        run: |
+          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
+
+      - name: Azure CLI script
+        run: |
+          az acr login --name ${{ secrets.ACR_NAME }}
+
+      - name: Build, tag, and push image to Azure Container Registry
+        id: build-image
+        env:
+          ACR_NAME: ${{ secrets.ACR_NAME }}
+          IMAGE_NAME: myapp
+          IMAGE_TAG: latest
+        run: |
+          # Build a docker container and
+          # push it to ACR so that it can
+          # be deployed to ACI.
+          docker build -t $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG .
+          docker push $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG
+          echo "::set-output name=image::$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
+
+  Continuous-Deployment:
+    needs: build-and-push-acr-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Log in to Azure CLI
+        env:
+          AZURE_USERNAME: ${{ secrets.AZURE_USERNAME }}
+          AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
+          AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
+        run: |
+          echo "$AZURE_PASSWORD" | az login -u "$AZURE_USERNAME" --password --tenant "$AZURE_TENANT"
+
+      - name: Deploy to Azure Container Instances
+        run: |
+          az container create --resource-group ${{ secrets.RESOURCE_GROUP }} --name myContainerInstance --image ${{ steps.build-image.outputs.image }} --dns-name-label myapp --ports 8080 --environment-variables 'AZURE_CREDENTIALS=${{ secrets.AZURE_CREDENTIALS }}'
+
+      - name: Clean previous images and containers
+        run: |
+          docker system prune -f
+>>>>>>> origin/master
