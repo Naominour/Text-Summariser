@@ -1,18 +1,17 @@
 # Text Summarization
 Welcome to the **text summarization project**! This project walks you through a complete pipeline for summarizing text, covering everything from data ingestion to evaluating the final model. We've used **GitHub Actions for CI/CD** and deployed everything on **Azure Cloud** to keep things running smoothly and continuously integrated. The modular design makes it easy to maintain and scale. Plus, we've created a user-friendly **web application** with HTML, CSS, and FastAPI so you can easily input text and get summaries right away.
 
-<img src="src\image\textsummarizer.png" style="width:200px;">
+<img src="src\image\textsummarizer.png" style="width:600px;">
 
 ![Deep Learning](https://img.shields.io/badge/Skill-Deep%20Learning-yellow)
 ![PyTorch](https://img.shields.io/badge/Skill-PyTorch-blueviolet)
 ![Transformers](https://img.shields.io/badge/Skill-Deep%20Learning-orange)
-![Sequence Modeling](https://img.shields.io/badge/Skill-Sequence%20Modeling-brightblue)
 ![Generative AI](https://img.shields.io/badge/Skill-Generative%20AI-green)
 ![Model Training and Evaluation](https://img.shields.io/badge/Skill-Model%20Training%20and%20Evaluation-orange)
 ![Model Deployment](https://img.shields.io/badge/Skill-Model%20Deployment-purpule)
 ![CI/CD](https://img.shields.io/badge/Skill-CI/CD-blue)
 ![Web Application](https://img.shields.io/badge/Skill-Web%20Application-yellow)
-![Python Programming](https://img.shields.io/badge/Skill-Python%20Programming-brightgreen)
+![Python Programming](https://img.shields.io/badge/Skill-Python%20Programming-blue)
 
 ## Workflows
 1. **Update config.yaml**
@@ -107,14 +106,16 @@ docker push <Your ACR Login Server>/<Your Image Name>:latest
 ```
 4. **Configure Continuous Deployment**
 
-Set Up GitHub Actions for CI/CD
+  Set Up GitHub Actions for CI/CD
 - Create the workflow file in .github/workflows/main.yml
 
 5. **Set Up GitHub Secrets**
 
-**ACR_NAME**: The name of your Azure Container Registry.
-**RESOURCE_GROUP**: The name of your Azure resource group.
-**AZURE_CREDENTIALS**: Credentials required to authenticate with Azure.
+   **ACR_NAME**: The name of your Azure Container Registry.
+
+   **RESOURCE_GROUP**: The name of your Azure resource group.
+
+   **AZURE_CREDENTIALS**: Credentials required to authenticate with Azure.
 
 6. **Deploy and Verify**
 - Push your code to the main branch.
@@ -122,7 +123,4 @@ Set Up GitHub Actions for CI/CD
 - Verify the deployment by visiting your Azure Web App URL.
 
 ## Results
-**Audio Samples**
 The final output of the project is a trained text summarization model deployed on Azure Cloud, accessible via a web interface where users can input text and receive summarized content.
-
-<img src="output\frame.png" style="width:200px;">
