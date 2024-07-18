@@ -36,8 +36,11 @@ jobs:
       - name: Install Utilities
         run: |
           sudo apt-get update
-          sudo apt-get install -y jq unzip
-        continue-on-error: true
+          sudo apt-get install -y jq unzip docker.io
+          sudo systemctl start docker
+          sudo systemctl enable docker
+          sudo usermod -aG docker $USER
+          newgrp docker
 
       - name: Log in to Azure CLI using managed identity
         run: |
