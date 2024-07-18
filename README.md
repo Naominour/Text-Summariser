@@ -10,4 +10,4 @@ Text Summarizer is a summary generator that helps to summarize articles, paragra
 4. Update configuration manager in src config
 5. Update the components
 6. Update the pipeline
-7. Update the main.py test
+7. Update the main.py
