@@ -33,6 +33,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: Install Utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq unzip
+        continue-on-error: true
+
       - name: Log in to Azure CLI using managed identity
         run: |
           az login --identity
@@ -48,9 +54,9 @@ jobs:
           IMAGE_NAME: myapp
           IMAGE_TAG: latest
         run: |
-          timeout 3600 docker build -t $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG . || { echo "Docker build failed"; exit 1; }
+          docker build -t $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG .
           docker push $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG
-          echo "::set-output name=image::$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
+          echo "::set-output name=image::$ACR_NAME.azurecr.io/$IMAGE_NAME::$IMAGE_TAG"
 
   Continuous-Deployment:
     needs: build-and-push-acr-image
