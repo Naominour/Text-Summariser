@@ -1,4 +1,6 @@
 import os
+import torch
+
 from textsummarizer.loggin import logger
 from textsummarizer.entity import ModelTrainerConfig
 from transformers import TrainingArguments, Trainer
@@ -6,7 +8,6 @@ from transformers import DataCollatorForSeq2Seq
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from textsummarizer.loggin import logger
 from datasets import load_dataset, load_from_disk
-import torch
 
 
 class ModelTrainer:
@@ -34,7 +35,7 @@ class ModelTrainer:
 
         trainer = Trainer(model=model_pegasus, args=trainer_args,
                     tokenizer=tokenizer, data_collator=seq2seq_data_collator,
-                    train_dataset=dataset_samsum_pt["test"],
+                    train_dataset=dataset_samsum_pt["train"],
                     eval_dataset=dataset_samsum_pt["validation"],
                     )
         
