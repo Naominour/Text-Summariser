@@ -33,18 +33,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Debug Info
-        run: |
-          echo "Running as user: $(whoami)"
-          echo "Home directory: $HOME"
-          echo "Current directory: $(pwd)"
-          echo "Listing home directory:"
-          ls -la $HOME
-
       - name: Install Utilities
         run: |
           sudo apt-get update
-          sudo apt-get install -y jq unzip || { echo "Failed to install jq and unzip"; exit 1; }
+          sudo apt-get install -y jq unzip
+        continue-on-error: true
 
       - name: Log in to Azure CLI using managed identity
         run: |
