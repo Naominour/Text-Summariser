@@ -1,8 +1,6 @@
 # Text Summarization
 Welcome to the **text summarization project**! This project walks you through a complete pipeline for summarizing text, covering everything from data ingestion to evaluating the final model. We've used **GitHub Actions for CI/CD** and deployed everything on **Azure Cloud** to keep things running smoothly and continuously integrated. The modular design makes it easy to maintain and scale. Plus, we've created a user-friendly **web application** with HTML, CSS, and FastAPI so you can easily input text and get summaries right away.
 
-<img src="src\image\textsummarizer.png" style="width:1000px;">
-
 ![Deep Learning](https://img.shields.io/badge/Skill-Deep%20Learning-yellow)
 ![PyTorch](https://img.shields.io/badge/Skill-PyTorch-blueviolet)
 ![Transformers](https://img.shields.io/badge/Skill-Deep%20Learning-orange)
