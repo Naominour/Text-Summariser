@@ -1,5 +1,5 @@
-# Text Summarization
-Welcome to the **text summarization project**! This project walks you through a complete pipeline for summarizing text, covering everything from data ingestion to evaluating the final model. We've used **GitHub Actions for CI/CD** and deployed everything on **Azure Cloud** to keep things running smoothly and continuously integrated. The modular design makes it easy to maintain and scale. Plus, we've created a user-friendly **web application** with HTML, CSS, and FastAPI so you can easily input text and get summaries right away.
+# Text Summarisation
+Welcome to the **text summarisation project**! This project walks you through a complete pipeline for summarising text, covering everything from data ingestion to evaluating the final model. We've used **GitHub Actions for CI/CD** and deployed everything on **Azure Cloud** to keep things running smoothly and continuously integrated. The modular design makes it easy to maintain and scale. Plus, we've created a user-friendly **web application** with HTML, CSS, and FastAPI so you can easily input text and get summaries right away.
 
 ![Deep Learning](https://img.shields.io/badge/Skill-Deep%20Learning-yellow)
 ![PyTorch](https://img.shields.io/badge/Skill-PyTorch-blueviolet)
@@ -23,19 +23,19 @@ Welcome to the **text summarization project**! This project walks you through a 
 
 ## Project Architecture
 1. **Data Ingestion**:
-   - In this step we handle data preprocessing and data cleaning.
+   - In this step, we handle data preprocessing and data cleaning.
 
 2. **Data Validation**:
-   - IEnsuring the text data's integrity and correctness.
+   - Ensuring the text data's integrity and correctness.
 
 3. **Data Transformation**:
-   - Cleaning and transforming text data into a suitable format for summarization.
+   - Cleaning and transforming text data into a suitable format for summarisation.
 
 4. **Model Training**:
-   - Training machine learning models for text summarization
+   - Training machine learning models for text summarisation
 
 5. **Model Evaluation**:
-   - Evaluating the performance of the text summarization models.
+   - Evaluating the performance of the text summarisation models.
 
 6. **Web Interface**:
    - A user-friendly interface for inputting text and displaying summaries.
@@ -44,7 +44,7 @@ Welcome to the **text summarization project**! This project walks you through a 
    - Automated testing and deployment using GitHub Actions.
 
 8. **Cloud Deployment**:
-   - Deploying the text summarization model and web interface on Azure Cloud.
+   - Deploying the text summarisation model and web interface on Azure Cloud.
 
 ## Key Features
 - **Modular pipeline structure** 
@@ -70,7 +70,7 @@ python app.py
 ## Azure Deployment Steps:
 
 1. **Prepare Your Environment:** 
--  Login to Azure Portal
+-  Log in to Azure Portal
 2. **Create and Configure Azure Resources** 
 -  Create a Resource Group
 ```bash
@@ -121,4 +121,4 @@ docker push <Your ACR Login Server>/<Your Image Name>:latest
 - Verify the deployment by visiting your Azure Web App URL.
 
 ## Results
-The final output of the project is a trained text summarization model deployed on Azure Cloud, accessible via a web interface where users can input text and receive summarized content.
+The final output of the project is a trained text summarisation model deployed on Azure Cloud, accessible via a web interface where users can input text and receive summarised content.
