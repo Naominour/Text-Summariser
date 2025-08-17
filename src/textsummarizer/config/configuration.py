@@ -87,7 +87,7 @@ class Configurationmanager:
     
 
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
-            config = self.config.model_evaluation  # Access the correct config section
+            config = self.config.model_evaluation 
             params = self.params.TrainingArguments
             create_directories([config.root_dir])
 
@@ -96,6 +96,6 @@ class Configurationmanager:
                   data_path=config.data_path,
                   model_path=config.model_path,
                   tokenizer_path=config.tokenizer_path,
-                  metrics_file_name=config.metric_file_name  # Ensure key matches dataclass
+                  metrics_file_name=config.metric_file_name
             )
             return model_evaluation_config
