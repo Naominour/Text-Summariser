@@ -30,8 +30,6 @@ class DataIngestion:
         """
         zip_file_path: str
         Extracts zip file to the data directory
-        Function returns None
-
         """
 
         unzip_path = self.config.unzip_dir
