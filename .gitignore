@@ -1,3 +1,10 @@
 textS/
 artifacts/*
 .gitattributes
+src/textsummarizer/components/__pycache__
+src/textsummarizer/config/__pycache__
+src/textsummarizer/constants/__pycache__
+src/textsummarizer/entity/__pycache__
+src/textsummarizer/loggin/__pycache__
+src/textsummarizer/pipeline/__pycache__
+src/textsummarizer/utils/__pycache__
