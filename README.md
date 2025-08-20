@@ -1,6 +1,8 @@
 # Text Summarisation
 Welcome to the **text summarisation project**! This project walks you through a complete pipeline for summarising text, covering everything from data ingestion to evaluating the final model. We've used **GitHub Actions for CI/CD** and deployed everything on **Azure Cloud** to keep things running smoothly and continuously integrated. The modular design makes it easy to maintain and scale. Plus, we've created a user-friendly **web application** with HTML, CSS, and FastAPI so you can easily input text and get summaries right away.
 
+![Text Summariser Architecture](src/image/text_summariser_img.png)
+
 ![Deep Learning](https://img.shields.io/badge/Skill-Deep%20Learning-yellow)
 ![PyTorch](https://img.shields.io/badge/Skill-PyTorch-blueviolet)
 ![Transformers](https://img.shields.io/badge/Skill-Deep%20Learning-orange)
@@ -11,7 +13,6 @@ Welcome to the **text summarisation project**! This project walks you through a 
 ![Web Application](https://img.shields.io/badge/Skill-Web%20Application-yellow)
 ![Python Programming](https://img.shields.io/badge/Skill-Python%20Programming-blue)
 
-![Text Summariser Architecture](src/image/text_summariser_img.png)
 
 ## Workflows
 1. **Update config.yaml**
