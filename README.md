@@ -5,13 +5,17 @@ Welcome to the **text summarisation project**! This project walks you through a 
 
 ![Deep Learning](https://img.shields.io/badge/Skill-Deep%20Learning-yellow)
 ![PyTorch](https://img.shields.io/badge/Skill-PyTorch-blueviolet)
-![Transformers](https://img.shields.io/badge/Skill-Deep%20Learning-orange)
+![Hugging Face Transformers](https://img.shields.io/badge/Skill-Hugging%20Face%20Transformers-orange)
+![Azure Cloud](https://img.shields.io/badge/Skill-Azure%20Cloud-yellow)
 ![Generative AI](https://img.shields.io/badge/Skill-Generative%20AI-green)
 ![Model Training and Evaluation](https://img.shields.io/badge/Skill-Model%20Training%20and%20Evaluation-orange)
 ![Model Deployment](https://img.shields.io/badge/Skill-Model%20Deployment-purpule)
 ![CI/CD](https://img.shields.io/badge/Skill-CI/CD-blue)
-![Web Application](https://img.shields.io/badge/Skill-Web%20Application-yellow)
+![FastAPI](https://img.shields.io/badge/Skill-FastAPI-yellow)
+![Version control](https://img.shields.io/badge/Skill-Version%20control-blue)
 ![Python Programming](https://img.shields.io/badge/Skill-Python%20Programming-blue)
+![Docker](https://img.shields.io/badge/Skill-Docker-blueviolet)
+
 
 
 ## Workflows
