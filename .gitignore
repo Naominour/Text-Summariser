@@ -8,3 +8,8 @@ src/textsummarizer/entity/__pycache__
 src/textsummarizer/loggin/__pycache__
 src/textsummarizer/pipeline/__pycache__
 src/textsummarizer/utils/__pycache__
+venv/
+.DS_Store
+logs/running_logs.log
+src/textsummarizer/__pycache__
+src/textsummarizer/utils/__pycache__
