@@ -11,6 +11,8 @@ Welcome to the **text summarisation project**! This project walks you through a 
 ![Web Application](https://img.shields.io/badge/Skill-Web%20Application-yellow)
 ![Python Programming](https://img.shields.io/badge/Skill-Python%20Programming-blue)
 
+![Text Summariser Architecture](src/image/text_summariser_img.png)
+
 ## Workflows
 1. **Update config.yaml**
 2. **Update params.yaml**
